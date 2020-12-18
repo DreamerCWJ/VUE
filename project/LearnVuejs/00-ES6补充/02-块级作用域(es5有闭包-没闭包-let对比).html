@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+    <button>按钮1</button>
+    <button>按钮2</button>
+    <button>按钮3</button>
+  </div>
+  <script src="../js/vue.js"></script>
+  <script>
+    var btns = document.getElementsByTagName('button');
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener('click', function () {
+        console.log('第' + i + '个按钮被点击')
+      })
+    }
+
+    // 1.情况一: ES5中没有使用闭包(错误的方式)
+
+    i = 0
+    {
+      btns[i].addEventListener('click', function () {
+        console.log('第' + i + '个按钮被点击')
+      })
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // (function (i) {
+    //     btns[i].addEventListener('click', function () {
+    //       console.log('第' + i + '个按钮被点击')
+    //     })
+    //   })(i)
+
+    //   (function (i) {
+    //     btns[i].addEventListener('click', function () {
+    //       console.log('第' + i + '个按钮被点击')
+    //     })
+    //   })(i)
+
+    //   (function (i) {
+    //     btns[i].addEventListener('click', function () {
+    //       console.log('第' + i + '个按钮被点击')
+    //     })
+    //   })(i)
+
+    //   (function (i) {
+    //     btns[i].addEventListener('click', function () {
+    //       console.log('第' + i + '个按钮被点击')
+    //     })
+    //   })(i)
+
+    //   (function (i) {
+    //     btns[i].addEventListener('click', function () {
+    //       console.log('第' + i + '个按钮被点击')
+    //     })
+    //   })(i)
+
+  </script>
+</body>
+
+</html>
